@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --color-reaction: hsl(0, 100%, 67%);
+    --color-reaction-bg: hsla(0, 100%, 67%, 0.15);
+    --color-memory: hsl(39, 100%, 56%);
+    --color-memory-bg: hsla(39, 100%, 56%, 0.15);
+    --color-verbal: hsl(166, 100%, 37%);
+    --color-verbal-bg: hsla(166, 100%, 37%, 0.15);
+    --color-visual: hsl(234, 85%, 45%);
+    --color-visual-bg: hsla(234, 85%, 45%, 0.15);
+    
+    
+    --txt-color-dark: hsl(224, 30%, 27%);
+    --txt-color-light-summary: hsl(222, 11%, 64%);
+    --txt-color-light-result: hsl(241, 100%, 89%);
+
+    --circle-gradient: linear-gradient(0deg, hsla(241, 72%, 46%, 0),  hsla(256, 72%, 46%, 1));
+    --bg-gradient: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.card {
+    position: absolute;
+    width: 740px;
+    height: 510px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper {
+    display: flex;
+    width: 740px;
+    height: 510px;
+    box-shadow: 10px 20px 25px rgb(224, 223, 223);
+    border-radius: 25px;
+    position: relative;
+}
+
+/* left half */
+.result {
+    background: var(--bg-gradient);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 370px;
+    height: 510px;
+    z-index: 2;
+}
+
+h1 {
+    color: white;
+    font-size: 56px;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 25px;
+    margin-top: 35px;
+}
+
+h3 {
+    margin: 40px 0 0 0;
+    font-size: 20px;
+    color: var(--txt-color-light-result);
+}
+
+.result p {
+    color: var(--txt-color-light-result);
+    margin: 0;
+    width: 225px;
+}
+
+.score-main {
+    background: var(--circle-gradient);
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    position: relative;
+    margin-top: 35px;
+}
+
+.score-main-wrapper {
+    /* height: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.denominator-wrapper {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.message p {
+    margin-top: 25px;
+}
+
+
+/* right half */
+.summary {
+    border-radius: 0 25px 25px 0;
+    width: 400px;
+    height: 510px;
+    position: absolute;
+    right: 0;
+}
+
+.summary-header {
+    margin-left: 70px;
+}
+
+.summary-header h3 {
+    color: var(--txt-color-dark);
+}
+
+.category {
+    margin-left: 70px;
+    display: flex;
+    position: relative;
+    width: 290px;
+    /* height: 55px; */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    /* background-color: bisque; */
+}
+
+.reaction {
+    background-color: var(--color-reaction-bg);
+    color: var(--color-reaction);
+    margin-top: 35px;
+}
+
+.memory {
+    background-color: var(--color-memory-bg);
+    color: var(--color-memory);
+}
+
+.verbal {
+    background-color: var(--color-verbal-bg);
+    color: var(--color-verbal);
+}
+
+.visual {
+    background-color: var(--color-visual-bg);
+    color: var(--color-visual);
+}
+
+img {
+    margin-left: 15px;
+}
+
+.category-contents {
+    display: flex;
+    margin-left: 15px;
+}
+
+.score {
+    position: absolute;
+    right: 15px;
+    color: var(--txt-color-light-summary);
+}
+
+.score-num {
+    color: var(--txt-color-dark);
+}
+
+.btn-wrapper {
+    position: relative;
+}
+
+button {
+    margin-top: 20px;
+    position: absolute;
+    left: calc(50% + 15px);
+    transform: translateX(-50%);
+    width: 290px;
+    height: 55px;
+    border-radius: 27px;
+    border: none;
+    background-color: var(--txt-color-dark);
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background: var(--bg-gradient);
+    cursor: pointer;
+}
+
+button:focus {
+    background: var(--bg-gradient);
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+/* box-shadow for shadow */
