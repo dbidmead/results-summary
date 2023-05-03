@@ -52,6 +52,7 @@ body {
     width: 370px;
     height: 510px;
     z-index: 2;
+    box-shadow: 10px 20px 25px rgb(224, 223, 223);
 }
 
 h1 {
@@ -90,7 +91,6 @@ h3 {
 }
 
 .score-main-wrapper {
-    /* height: auto; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -131,10 +131,8 @@ h3 {
     display: flex;
     position: relative;
     width: 290px;
-    /* height: 55px; */
     margin-bottom: 20px;
     border-radius: 8px;
-    /* background-color: bisque; */
 }
 
 .reaction {
@@ -218,4 +216,99 @@ button:focus {
      color: hsl(228, 45%, 44%); 
 }
 
-/* box-shadow for shadow */
+@media (max-width: 650px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 375px;
+        transform: translate(50%, -25%);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .result {
+        height: 305px;
+        width: 375px;
+        margin-top: 50px;
+        /* transform: translate(50%, -30%); */
+        box-shadow: none;
+        border-radius: 0 0 25px 25px;
+    } 
+
+    .result h3 {
+        margin-top: 70px;
+    }
+
+    .result p {
+        font-size: 14px;
+    }
+
+    .score-main {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .score-main p {
+        margin-top: 10px;
+    }
+
+    h1 {
+        transform: translateY(10%);
+        font-size: 40px;
+    }
+
+    .denominator-wrapper {
+        bottom: 15%;
+    }
+
+    .message h2 {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    .message p {
+        width: 250px;
+        margin-top: 7px;
+    }
+
+    .summary {
+        height: 745px;
+        width: 375px;
+        right: auto;
+        border-radius: 0;
+    }
+
+    .summary-header {
+        margin-left: 30px;
+        margin-top: 375px;
+    }
+
+    .category {
+        margin-left: 30px;
+        width: 315px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        height: auto;
+    }
+
+    .category-contents p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 315px;
+        left: 50%;
+        margin-top: 5px;
+        font-size: 14px;
+        height: 50px;
+    }
+
+    .attribution {
+        width: 100vh;
+        font-size: 7px;
+        bottom: 0;
+    }
+}
