@@ -21,6 +21,7 @@
 
 body {
     font-family: 'Hanken Grotesk', sans-serif;
+    overflow: hidden;
 }
 
 .card {
@@ -216,28 +217,30 @@ button:focus {
      color: hsl(228, 45%, 44%); 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
+    .card {
+        width: 375px;
+        height: 100vh;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 375px;
-        transform: translate(50%, -25%);
         border-radius: 0;
         box-shadow: none;
     }
 
     .result {
-        height: 305px;
+        height: 290px;
         width: 375px;
-        margin-top: 50px;
-        /* transform: translate(50%, -30%); */
+        padding-top: 40px;
         box-shadow: none;
         border-radius: 0 0 25px 25px;
     } 
 
     .result h3 {
-        margin-top: 70px;
+        margin-top: 20px;
     }
 
     .result p {
@@ -245,9 +248,9 @@ button:focus {
     }
 
     .score-main {
-        width: 100px;
-        height: 100px;
-        margin-top: 10px;
+        width: 110px;
+        height: 110px;
+        margin-top: 15px;
     }
 
     .score-main p {
@@ -255,7 +258,6 @@ button:focus {
     }
 
     h1 {
-        transform: translateY(10%);
         font-size: 40px;
     }
 
@@ -264,14 +266,14 @@ button:focus {
     }
 
     .message h2 {
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 0;
         font-size: 20px;
     }
 
     .message p {
         width: 250px;
-        margin-top: 7px;
+        margin-top: 10px;
     }
 
     .summary {
@@ -283,14 +285,14 @@ button:focus {
 
     .summary-header {
         margin-left: 30px;
-        margin-top: 375px;
+        margin-top: 350px;
     }
 
     .category {
         margin-left: 30px;
         width: 315px;
-        margin-bottom: 15px;
-        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-top: 15px;
         height: auto;
     }
 
