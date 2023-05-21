@@ -1,4 +1,6 @@
-import scoreData from './data.json' assert { type: "json" };
+// import scoreData from './data.json' assert { type: "json" };
+
+const scoreData = await fetch('./data.json').then(res => res.json());
 
 const reactionScoreDisplay = document.getElementById("rxn-score");
 const memoryScoreDisplay = document.getElementById("mem-score");
